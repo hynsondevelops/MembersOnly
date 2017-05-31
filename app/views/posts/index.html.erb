@@ -1,0 +1,10 @@
+<h1>Post Index</h1>
+
+<% @posts.each do |post| %>
+
+	<h3> <%= post.title %> </h3>
+	<% if signed_in? %>
+		<h3> By <%= post.user.name %> </h3>
+	<%end%>
+	<p> <%= post.body %> </p>
+<%end%>
